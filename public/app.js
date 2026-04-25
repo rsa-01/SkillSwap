@@ -412,5 +412,20 @@ document.getElementById('chat-form').addEventListener('submit', async (e) => {
     }
 });
 
+// --- Mobile Menu ---
+function toggleMobileMenu() {
+    const menu = document.getElementById('nav-menu');
+    const btn = document.getElementById('hamburger-btn');
+    menu.classList.toggle('open');
+    btn.classList.toggle('open');
+}
+
+function closeMobileMenu() {
+    const menu = document.getElementById('nav-menu');
+    const btn = document.getElementById('hamburger-btn');
+    menu.classList.remove('open');
+    btn.classList.remove('open');
+}
+
 // Start app
 init();
