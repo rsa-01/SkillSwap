@@ -1,13 +1,13 @@
 :root {
-    --primary-color: #4f46e5; /* Modern Indigo */
-    --primary-hover: #4338ca;
-    --secondary-color: #0ea5e9; /* Sky Blue accent */
-    --secondary-hover: #0284c7;
-    --bg-color: #f8fafc; /* Very light slate */
+    --primary-color: #ea580c; /* Vibrant Orange */
+    --primary-hover: #c2410c; /* Darker Orange */
+    --secondary-color: #374151; /* Dark Grey accent */
+    --secondary-hover: #1f2937;
+    --bg-color: #f3f4f6; /* Very light grey */
     --card-bg: #ffffff;
-    --text-primary: #0f172a;
-    --text-secondary: #475569;
-    --border-color: rgba(15, 23, 42, 0.08); /* Subtle transparent borders */
+    --text-primary: #111827; /* Dark Grey / Near Black */
+    --text-secondary: #4b5563; /* Medium dark grey */
+    --border-color: #e5e7eb; /* Light grey borders */
     --success-color: #10b981;
     --danger-color: #ef4444;
     --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.04);
@@ -135,7 +135,7 @@ nav {
 
 .filters input:focus, .filters select:focus {
     border-color: var(--primary-color);
-    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.15);
+    box-shadow: 0 0 0 3px rgba(234, 88, 12, 0.15);
 }
 
 .grid-container {
@@ -166,8 +166,8 @@ nav {
 }
 
 .category-tag {
-    background-color: #e0e7ff; /* Light indigo */
-    color: #4338ca;
+    background-color: #ffedd5; /* Light orange */
+    color: #c2410c; /* Dark orange */
     padding: 0.35rem 0.75rem;
     border-radius: 99px;
     font-size: 0.75rem;
@@ -215,12 +215,12 @@ nav {
 .btn-primary {
     background-color: var(--primary-color);
     color: white;
-    box-shadow: 0 4px 6px -1px rgba(79, 70, 229, 0.2);
+    box-shadow: 0 4px 6px -1px rgba(234, 88, 12, 0.2);
 }
 .btn-primary:hover {
     background-color: var(--primary-hover);
     transform: translateY(-1px);
-    box-shadow: 0 6px 12px -2px rgba(79, 70, 229, 0.3);
+    box-shadow: 0 6px 12px -2px rgba(234, 88, 12, 0.3);
 }
 
 .btn-secondary {
@@ -294,7 +294,7 @@ nav {
 
 .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
     border-color: var(--primary-color);
-    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.15);
+    box-shadow: 0 0 0 3px rgba(234, 88, 12, 0.15);
 }
 
 .list-container {
@@ -476,7 +476,7 @@ nav {
     align-items: center;
     font-size: 2.25rem;
     font-weight: 700;
-    box-shadow: 0 4px 10px rgba(79, 70, 229, 0.2);
+    box-shadow: 0 4px 10px rgba(234, 88, 12, 0.2);
 }
 .profile-info h3 {
     font-size: 1.75rem;
@@ -570,7 +570,7 @@ nav {
 }
 .chat-input-area input:focus {
     border-color: var(--primary-color);
-    box-shadow: inset 0 2px 4px rgba(0,0,0,0.02), 0 0 0 3px rgba(79, 70, 229, 0.15);
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.02), 0 0 0 3px rgba(234, 88, 12, 0.15);
 }
 .chat-input-area button {
     border-radius: 99px;
