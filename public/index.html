@@ -28,8 +28,25 @@
     </header>
 
     <main class="container">
+        <!-- Landing Section -->
+        <section id="landing-section" class="section active" style="text-align: center; padding: 4rem 1rem; min-height: 80vh; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+            <div style="max-width: 600px; animation: modalSlideIn 0.5s ease-out;">
+                <span class="logo" style="font-size: 3.5rem; letter-spacing: -0.04em; display: block; margin-bottom: 1.5rem;">SkillSwap</span>
+                <h1 style="font-size: 2.25rem; font-weight: 800; color: var(--text-primary); margin-bottom: 1rem; line-height: 1.2;">
+                    Exchange knowledge. <br/>Grow together.
+                </h1>
+                <p style="font-size: 1.1rem; color: var(--text-secondary); margin-bottom: 2.5rem; line-height: 1.6;">
+                    Join a community of continuous learners. Teach what you know, and learn what you don't. No money required, just pure skill exchange.
+                </p>
+                <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                    <button onclick="showSection('auth'); toggleAuth('signup')" class="btn btn-primary" style="width: auto; padding: 0.8rem 2rem; font-size: 1.05rem; border-radius: 99px;">Get Started</button>
+                    <button onclick="showSection('auth'); toggleAuth('login')" class="btn btn-secondary" style="width: auto; padding: 0.8rem 2rem; font-size: 1.05rem; border-radius: 99px;">Log In</button>
+                </div>
+            </div>
+        </section>
+
         <!-- Auth Section -->
-        <section id="auth-section" class="section active">
+        <section id="auth-section" class="section" style="display: none;">
             <div class="auth-container">
                 <div class="auth-card" id="login-card">
                     <div style="text-align: center; margin-bottom: 1.5rem;">

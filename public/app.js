@@ -13,7 +13,7 @@ function init() {
         showSection('feed');
     } else {
         document.getElementById('app-navbar').style.display = 'none';
-        showSection('auth');
+        showSection('landing');
     }
 }
 
