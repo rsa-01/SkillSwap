@@ -8,21 +8,29 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header class="navbar" id="app-navbar" style="display: none;">
-        <div class="logo">SkillSwap</div>
+    <header class="navbar" id="app-navbar">
+        <div class="logo" style="cursor: pointer;" onclick="showSection(currentUser ? 'feed' : 'landing')">SkillSwap</div>
         <button class="hamburger" id="hamburger-btn" onclick="toggleMobileMenu()">
             <span></span><span></span><span></span>
         </button>
         <div class="nav-menu" id="nav-menu">
-            <nav>
-                <button onclick="showSection('feed'); closeMobileMenu()" class="nav-btn active" id="nav-feed">Feed</button>
-                <button onclick="showSection('post'); closeMobileMenu()" class="nav-btn" id="nav-post">Post Skill</button>
-                <button onclick="showSection('exchanges'); closeMobileMenu()" class="nav-btn" id="nav-exchanges">My Exchanges</button>
-            </nav>
-            <div class="user-controls">
-                <span id="current-user-name" class="user-name-display"></span>
-                <button onclick="showSection('profile'); closeMobileMenu()" class="btn btn-secondary btn-sm">Profile</button>
-                <button onclick="logout()" class="btn btn-danger btn-sm">Logout</button>
+            <!-- Logged In Nav Items -->
+            <div id="auth-nav-items" style="display: none; align-items: center; gap: 1.5rem; width: 100%; justify-content: space-between;">
+                <nav>
+                    <button onclick="showSection('feed'); closeMobileMenu()" class="nav-btn active" id="nav-feed">Feed</button>
+                    <button onclick="showSection('post'); closeMobileMenu()" class="nav-btn" id="nav-post">Post Skill</button>
+                    <button onclick="showSection('exchanges'); closeMobileMenu()" class="nav-btn" id="nav-exchanges">My Exchanges</button>
+                </nav>
+                <div class="user-controls">
+                    <span id="current-user-name" class="user-name-display"></span>
+                    <button onclick="showSection('profile'); closeMobileMenu()" class="btn btn-secondary btn-sm">Profile</button>
+                    <button onclick="logout()" class="btn btn-danger btn-sm">Logout</button>
+                </div>
+            </div>
+            <!-- Guest Nav Items -->
+            <div id="guest-nav-items" style="display: flex; align-items: center; gap: 1rem;">
+                <button onclick="showSection('auth'); toggleAuth('login'); closeMobileMenu()" class="btn btn-secondary btn-sm">Log In</button>
+                <button onclick="showSection('auth'); toggleAuth('signup'); closeMobileMenu()" class="btn btn-primary btn-sm">Sign Up</button>
             </div>
         </div>
     </header>
@@ -31,8 +39,7 @@
         <!-- Landing Section -->
         <section id="landing-section" class="section active" style="text-align: center; padding: 4rem 1rem; min-height: 80vh; display: flex; flex-direction: column; justify-content: center; align-items: center;">
             <div style="max-width: 600px; animation: modalSlideIn 0.5s ease-out;">
-                <span class="logo" style="font-size: 3.5rem; letter-spacing: -0.04em; display: block; margin-bottom: 1.5rem;">SkillSwap</span>
-                <h1 style="font-size: 2.25rem; font-weight: 800; color: var(--text-primary); margin-bottom: 1rem; line-height: 1.2;">
+                <h1 style="font-size: 2.75rem; font-weight: 800; color: var(--text-primary); margin-bottom: 1rem; line-height: 1.2;">
                     Exchange knowledge. <br/>Grow together.
                 </h1>
                 <p style="font-size: 1.1rem; color: var(--text-secondary); margin-bottom: 2.5rem; line-height: 1.6;">

@@ -8,11 +8,13 @@ let chatPollInterval = null;
 // --- Init ---
 function init() {
     if (currentUser && authToken) {
-        document.getElementById('app-navbar').style.display = 'flex';
+        document.getElementById('auth-nav-items').style.display = 'flex';
+        document.getElementById('guest-nav-items').style.display = 'none';
         document.getElementById('current-user-name').innerText = currentUser.name;
         showSection('feed');
     } else {
-        document.getElementById('app-navbar').style.display = 'none';
+        document.getElementById('auth-nav-items').style.display = 'none';
+        document.getElementById('guest-nav-items').style.display = 'flex';
         showSection('landing');
     }
 }
