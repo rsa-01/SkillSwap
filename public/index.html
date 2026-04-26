@@ -35,22 +35,23 @@
         </div>
     </header>
 
-    <main class="container">
-        <!-- Landing Section -->
-        <section id="landing-section" class="section active" style="text-align: center; padding: 4rem 1rem; min-height: 80vh; display: flex; flex-direction: column; justify-content: center; align-items: center;">
-            <div style="max-width: 600px; margin: 0 auto; animation: modalSlideIn 0.5s ease-out;">
-                <h1 style="font-size: 2.75rem; font-weight: 800; color: var(--text-primary); margin-bottom: 1rem; line-height: 1.2;">
-                    Exchange knowledge. <br/>Grow together.
-                </h1>
-                <p style="font-size: 1.1rem; color: var(--text-secondary); margin-bottom: 2.5rem; line-height: 1.6;">
-                    Join a community of continuous learners. Teach what you know, and learn what you don't. No money required, just pure skill exchange.
-                </p>
-                <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-                    <button onclick="showSection('auth'); toggleAuth('signup')" class="btn btn-primary" style="width: auto; padding: 0.8rem 2rem; font-size: 1.05rem; border-radius: 99px;">Get Started</button>
-                    <button onclick="showSection('auth'); toggleAuth('login')" class="btn btn-secondary" style="width: auto; padding: 0.8rem 2rem; font-size: 1.05rem; border-radius: 99px;">Log In</button>
-                </div>
+    <!-- Landing Section -->
+    <section id="landing-section" class="section active" style="background-color: var(--primary-color); text-align: center; padding: 6rem 1.5rem; min-height: calc(100vh - 70px); display: flex; flex-direction: column; justify-content: center; align-items: center; color: white;">
+        <div style="max-width: 700px; margin: 0 auto; animation: modalSlideIn 0.5s ease-out;">
+            <h1 style="font-size: 3.25rem; font-weight: 800; color: #ffffff; margin-bottom: 1.25rem; line-height: 1.15; text-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+                Exchange knowledge. <br/>Grow together.
+            </h1>
+            <p style="font-size: 1.2rem; color: rgba(255, 255, 255, 0.9); margin-bottom: 3rem; line-height: 1.6;">
+                Join a community of continuous learners. Teach what you know, and learn what you don't. No money required, just pure skill exchange.
+            </p>
+            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                <button onclick="showSection('auth'); toggleAuth('signup')" class="btn" style="background-color: #ffffff; color: var(--primary-color); width: auto; padding: 0.9rem 2.25rem; font-size: 1.1rem; border-radius: 99px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">Get Started</button>
+                <button onclick="showSection('auth'); toggleAuth('login')" class="btn" style="background-color: transparent; color: #ffffff; border: 2px solid rgba(255, 255, 255, 0.4); width: auto; padding: 0.9rem 2.25rem; font-size: 1.1rem; border-radius: 99px;">Log In</button>
             </div>
-        </section>
+        </div>
+    </section>
+
+    <main class="container">
 
         <!-- Auth Section -->
         <section id="auth-section" class="section" style="display: none;">
